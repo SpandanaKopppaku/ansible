@@ -1,0 +1,7 @@
+# Demo on Facts
+- name: Demo on Facts
+  hosts: all 
+  - name: Printing fact 
+      ansible.builtin.debug:
+        msg: nsible_distribution is {{ ansible_distribution }}
+        
