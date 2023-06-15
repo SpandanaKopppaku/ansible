@@ -10,3 +10,9 @@
     - name: Printing Hello From Play2
       ansible.builtin.debug:
         msg: Hello from play1 of task2
+- name: Play3  
+  hosts: prod 
+  tasks:
+    - name: Printing Hello From Play3
+      ansible.builtin.debug:
+        msg: Hello from play1 of task3
