@@ -25,8 +25,10 @@
         msg: Name Of the car is {{ CARNAME }}            # passing varibale through CLI
 
     - name: Demo to show Quotes 
-      ansible.builtin.debug:
+      ansible.builtin.debug:          
         msg: "{{ URL }}"
+
+        
 
 # Variable Precendence : 
 
