@@ -5,8 +5,8 @@
   tasks:
     - name: Demo on using shell module
       ansible.builtin.shell: uptime
-      register: OUT
+      register: OUT.stdout
 
     - name: Printing the OUT variable
       ansible.builtin.debug:
-        msg: "{{ OUT }}"
+        msg: "{{ OUT.stdout }}"
