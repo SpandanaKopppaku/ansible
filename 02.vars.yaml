@@ -24,6 +24,10 @@
       ansible.builtin.debug:
         msg: Name Of the car is {{ CARNAME }}            # passing varibale through CLI
 
+    - name: Demo to show Quotes 
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
+
 # Variable Precendence : 
 
 # CLI Variables > local variables > file variables  > Global Variables 
