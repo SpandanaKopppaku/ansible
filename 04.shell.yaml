@@ -5,3 +5,4 @@
   tasks:
     - name: Demo on using shell module
       ansible.builtin.shell: uptime
+      register: OUT
