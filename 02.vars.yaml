@@ -1,7 +1,9 @@
 - name: Demo on using the varibales on playbook
   hosts: all 
   vars:
-    URL: play.google.com                             # Global Variables : Variables can be acessed by all the tasks of the play. 
+    URL: play.google.com                           # Global Variables : Variables can be acessed by all the tasks of the play. 
+  vars_files:
+    dev-vars.yaml
   tasks:
     - name: Printing the value of variable
       ansible.builtin.debug:
@@ -28,7 +30,7 @@
       ansible.builtin.debug:          
         msg: "{{ URL }}"
 
-        
+
 
 # Variable Precendence : 
 
