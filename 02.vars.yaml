@@ -8,6 +8,7 @@
     - name: URLNAME 
       prompt: Enter the URLNAME
       
+
   tasks:
     - name: Printing the value of variable
       ansible.builtin.debug:
@@ -34,7 +35,9 @@
       ansible.builtin.debug:          
         msg: "{{ URL }}"
 
-
+    - name: Printing prompt variable 
+      ansible.builtin.debug:
+        msg: Url from the prompt variable is {{ URLNAME }}
 
 # Variable Precendence : 
 
