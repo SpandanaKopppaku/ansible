@@ -18,11 +18,11 @@
       ansible.builtin.debug:
         msg: value of URL is {{ URL }}
       vars:
-        URL: task.google.com
+        URL: task.google.com                              # Local varaibale
 
-    - name: Printing value of the variable which is not declared
+    - name: Printing value of the variable using command line value
       ansible.builtin.debug:
-        msg: Name Of the car is {{ CARNAME }}
+        msg: Name Of the car is {{ CARNAME }}            # passing varibale through CLI
 
 # Variable Precendence : 
 
