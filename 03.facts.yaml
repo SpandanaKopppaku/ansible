@@ -1,8 +1,8 @@
 # Demo on Facts
-- name: Demo on Facts
-  hosts: all 
+- name: Demo on using facts
+  hosts: all
+  # gather_facts: false            using this you can control on gathering the facts.
   tasks:
-  - name: Printing fact 
+    - name: Printing the fact
       ansible.builtin.debug:
-        msg: nsible_distribution is {{ ansible_distribution }}
-        
+        msg: ansible_distribution is {{ ansible_distribution }}
