@@ -4,5 +4,5 @@
   tasks:
   - name: Printing fact 
       ansible.builtin.debug:
-      msg: nsible_distribution is {{ ansible_distribution }}
+        msg: nsible_distribution is {{ ansible_distribution }}
         
