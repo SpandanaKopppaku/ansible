@@ -6,3 +6,7 @@
     - name: Printing the value of variable
       ansible.builtin.debug:
         msg: value of URL is {{ URL }}
+
+    - name: Printing value of variable which is not decalred
+      ansible.builtin.debug:
+        msg: value of URL is {{ CARNAME }}
