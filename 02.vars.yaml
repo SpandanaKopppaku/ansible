@@ -4,6 +4,9 @@
     URL: play.google.com                           # Global Variables : Variables can be acessed by all the tasks of the play. 
   vars_files:
     dev-vars.yaml
+  vars_prompt:
+    - name: URLNAME 
+      prompt: Enter the URLNAME
   tasks:
     - name: Printing the value of variable
       ansible.builtin.debug:
