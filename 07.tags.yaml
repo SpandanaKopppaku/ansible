@@ -4,24 +4,29 @@
     - name: This is frotend task
       ansible.builtin.debug:
         msg: Installing frontend
+      tags: frontend
       
     - name: Starting frontend
       ansible.builtin.debug:
         msg: Starting frontend
+      tags: frontend
 
     - name: This is user task
       ansible.builtin.debug:
         msg: Installing user
+      tags: user
       
     - name: Starting user
       ansible.builtin.debug:
         msg: Starting user
+      tags: user
             
-
     - name: This is catalogue task
       ansible.builtin.debug:
         msg: Installing catalogue
+      tags: catalogue
       
     - name: Starting catalogue
       ansible.builtin.debug:
         msg: Starting catalogue
+      tags: catalogue
