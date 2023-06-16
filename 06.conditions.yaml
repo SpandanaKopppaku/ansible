@@ -23,3 +23,4 @@
       ansible.builtin.debug:
         msg: bar is not decalred
       when: bar is undefined
+      
