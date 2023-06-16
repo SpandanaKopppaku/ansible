@@ -2,7 +2,7 @@
 
 - name: Demo on privilege escalation
   hosts: all 
-    become: yes
+  become: yes
   tasks:
     - name: checking the user id
       ansible.builtin.shell: id
