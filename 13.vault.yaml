@@ -1,0 +1,8 @@
+- name: Demo on secret encyption on playbook
+  hosts: localhost
+  vars:
+    PASSWORD: passwd321 
+  tasks:
+  - name: Demo on secret
+    ansible.builtin.debug:
+      msg: password is {{ PASSWORD }}
