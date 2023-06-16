@@ -1,7 +1,7 @@
 - name: playbook to demonstrate template
   hosts: all 
   tasks:
-  - name:
+  - name: copying the env file
     ansible.builtin.template:
-      src: systemd.txt
-      dest: /home/centos/systemd.txt
+      src: env.txt
+      dest: /home/centos/env.txt
