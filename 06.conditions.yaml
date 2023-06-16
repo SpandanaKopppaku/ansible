@@ -17,3 +17,8 @@
       ansible.builtin.debug:
         msg: I am learning ansible and I will only print when action is true
       when: action
+
+    - name: I will run only when the value of bar is not decalred
+      ansible.builtin.debug:
+        msg: bar is not decalred
+      when: bar is undefined
