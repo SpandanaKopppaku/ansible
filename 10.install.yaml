@@ -2,7 +2,7 @@
 - name: Demo on installing packages
   hosts: all 
   tasks:
-- name: Demo on installing nginx
-  ansible.builtin.package:
-    name: nginx
-    state: present
+  - name: Demo on installing nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present
