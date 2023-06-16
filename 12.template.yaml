@@ -1,0 +1,7 @@
+- name: playbook to demonstrate template
+  hosts: all 
+  tasks:
+  - name:
+    ansible.builtin.template:
+      src: systemd.txt
+      dest: /home/centos/systemd.txt

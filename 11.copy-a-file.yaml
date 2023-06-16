@@ -1,8 +1,7 @@
-
 - name: copying a file from source to destination location
   hosts: all 
   tasks:
-- name: copying the systemd file
-   ansible.builtin.copy:
-    src: systemd.txt
-    dest: /home/centos/systemd.txt
+  - name: copying the systemd file
+    ansible.builtin.copy:
+      src: systemd.txt
+      dest: /home/centos/systemd.txt
