@@ -14,6 +14,12 @@
     path: /usr/share/nginx/html
     state: absent
 
+- name: Copy the frontend component which is download on the remote machine
+  ansible.builtin.copy:
+    src: /tmp/frontned-main/static
+    dest: /usr/share/nginx/html
+    remote_src: yes
+
 - name: starting nginx
   ansible.builtin.systemd:
     name: nginx
