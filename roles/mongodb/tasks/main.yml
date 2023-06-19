@@ -23,4 +23,14 @@
 - name: Download and extract frontend
   ansible.builtin.include_role:
     name: common
-    tasks_from: download   
+    tasks_from: download
+
+- name: Injecting the Mondb schema
+  community.mongodb.mongodb_shell:
+    file: "/tmp/{{ COMPONENT }}-main/catalogue.js"
+    idempotent: yes
+
+- name: Injecting the Mondb schema
+  community.mongodb.mongodb_shell:
+    file: "/tmp/{{ COMPONENT }}-main/users.js"
+    idempotent: yes
