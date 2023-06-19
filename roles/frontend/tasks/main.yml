@@ -16,7 +16,7 @@
 
 - name: Copy the frontend component which is download on the remote machine
   ansible.builtin.copy:
-    src: /tmp/frontned-main/static
+    src: /tmp/frontend-main/static
     dest: /usr/share/nginx/html
     remote_src: yes
 
