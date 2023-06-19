@@ -19,3 +19,8 @@
     name: mongod
     state: started
     enabled: true
+
+- name: Download and extract frontend
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download   
