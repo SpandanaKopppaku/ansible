@@ -1,5 +1,5 @@
-- name: Copying MongoDB repository
-  ansible.builtin.template:
+- name: Configuring MongoDB Repository
+  ansible.builtin.copy:
     src: mongodb.repo
     dest: /etc/yum.repos.d/mongodb.repo
 
