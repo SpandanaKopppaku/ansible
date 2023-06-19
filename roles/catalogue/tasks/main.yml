@@ -6,3 +6,8 @@
     name: npm
     state: present  
       
+- name: Creating App user
+  ansible.builtin.user:
+    name: roboshop
+    comment: Roboshop application user
+    
