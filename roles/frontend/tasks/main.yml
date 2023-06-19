@@ -9,6 +9,11 @@
     dest: /tmp/
     remote_src: yes
 
+- name: Performing nginx cleanup
+  ansible.builtin.file:
+    path: /usr/share/nginx
+    state: absent
+
 - name: starting nginx
   ansible.builtin.systemd:
     name: nginx
