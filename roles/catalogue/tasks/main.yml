@@ -16,5 +16,9 @@
     name: common
     tasks_from: download
 
+- name: Generating artifact with npm install
+  community.general.npm:
+    path: /home/roboshop/catalogue  
+
 
     
