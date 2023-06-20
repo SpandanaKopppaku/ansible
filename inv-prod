@@ -1,0 +1,17 @@
+[frontend]
+frontend-prod.roboshop.internal
+
+[mongodb]
+mongodb-prod.roboshop.internal
+
+[catalogue]
+catalogue-prod.roboshop.internal
+
+[redis]
+redis-prod.roboshop.internal
+
+[user]
+user-prod.roboshop.internal
+
+[cart]
+cart-prod.roboshop.internal
