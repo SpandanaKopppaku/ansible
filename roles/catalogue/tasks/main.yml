@@ -18,7 +18,12 @@
 
 - name: Generating artifact with npm install
   community.general.npm:
-    path: /home/roboshop/catalogue  
+    path: /home/{{APPUSER}}/{{COMPONENT}} 
 
+- name: Copying the systemd file
+  ansible.builtin.template:
+    src: systemd.service
+    dest: /etc/systemd/system/catalogue.service
+    
 
     
