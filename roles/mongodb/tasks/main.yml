@@ -33,5 +33,5 @@
     - catalogue
     - users
 
-- name: Configuring the Node name
-  community.mongodb.mongodb_shell: set-hostname {{COMPONENT}}-{{ENV}}
+- name: Configuring Node Name
+  ansible.builtin.shell: set-hostname {{COMPONENT}}-{{ENV}}
