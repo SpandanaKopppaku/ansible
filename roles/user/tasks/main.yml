@@ -25,7 +25,7 @@
     src: systemd.service
     dest: /etc/systemd/system/{{COMPONENT}}.service
     
-- name: Starting User
+- name: Starting {{COMPONENT}}
   ansible.builtin.systemd:
     name: User
     state: restarted
