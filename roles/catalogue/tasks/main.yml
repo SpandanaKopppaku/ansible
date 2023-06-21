@@ -25,7 +25,7 @@
     src: systemd.service
     dest: /etc/systemd/system/{{COMPONENT}}.service
     
-- name: Starting {{COMPONENT}}
+- name: ReStarting {{COMPONENT}}
   ansible.builtin.systemd:
     name: "{{COMPONENT}}"
     state: restarted
