@@ -27,7 +27,7 @@
     
 - name: Starting {{COMPONENT}}
   ansible.builtin.systemd:
-    name: User
+    name: "{{COMPONENT}}"
     state: restarted
     enabled: true
     daemon_reload: true
