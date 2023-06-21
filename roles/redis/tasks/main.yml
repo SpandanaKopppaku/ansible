@@ -14,9 +14,9 @@
     regexp: '127.0.0.1'
     replace: '0.0.0.0'   
 
-- name: Starting Redis
+- name: ReStarting {{COMPONENT}}
   ansible.builtin.systemd:
-    name: redis
+    name: "{{COMPONENT}}"
     state: started
     enabled: true
 
