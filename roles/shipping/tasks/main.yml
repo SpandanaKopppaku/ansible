@@ -14,4 +14,6 @@
     tasks_from: download   
 
 - name: Generating {{COMPONENT}} artifacts
-  ansible.builtin.shell: cd /home/{{APPUSER}}/{{COMPONENT}}/ && mvn clean package
+  ansible.builtin.shell: mvn clean package && mv target/{{COMPONENT}}-1.0.jar {{COMPONENT}}.jar
+  args:
+    chdir: /home/{{APPUSER}}/{{COMPONENT}}/
