@@ -1,7 +1,5 @@
-- name: Configuring MongoDB Repository
-  ansible.builtin.copy:
-    src: mongodb.repo
-    dest: /etc/yum.repos.d/mongodb.repo
+- name: Installing the Erlang package
+  ansible.builtin.shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | sudo bash
 
 - name: Installing MongoDB
   ansible.builtin.package:
