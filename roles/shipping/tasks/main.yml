@@ -18,7 +18,7 @@
   args:
     chdir: /home/{{APPUSER}}/{{COMPONENT}}/
 
-- name: Copying the systemd file
+- name: Copying the systemd file of {{COMPONENT}}-{{ENV}} Server
   ansible.builtin.template:
     src: systemd.service
     dest: /etc/systemd/system/{{COMPONENT}}.service
