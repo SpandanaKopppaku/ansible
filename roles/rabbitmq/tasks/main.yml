@@ -16,18 +16,5 @@
     state: started
     enabled: true
 
-- name: Download and extract frontend
-  ansible.builtin.include_role:
-    name: common
-    tasks_from: download
-
-- name: Injecting the Mondb schema
-  community.mongodb.mongodb_shell:
-    file: "/tmp/{{ COMPONENT }}-main/{{item}}.js"
-    idempotent: yes
-  loop: 
-    - catalogue
-    - users
-
 - name: Configuring Node Name
   ansible.builtin.shell: set-hostname {{COMPONENT}}-{{ENV}}
