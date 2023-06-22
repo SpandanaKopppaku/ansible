@@ -1,4 +1,4 @@
-- name: Creating App user
+- name: Creating App user for {{COMPONENT}}-{{ENV}} Server
   ansible.builtin.user:
     name: "{{APPUSER}}"
     comment: Roboshop application user
