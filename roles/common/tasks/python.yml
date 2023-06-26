@@ -16,10 +16,18 @@
     name: common
     tasks_from: download
 
-- name: Generating artifact with npm install
-  community.general.npm:
-    path: /home/{{APPUSER}}/{{COMPONENT}} 
+- name: updating the UID in the {{COMPONENT}}.ini file
+  ansible.builtin.lineinfile:
+    path: /etc/selinux/config
+    regexp: '^uid'
+    line: uid = {{OUT.uid}}
 
+- name: updating the UID in the {{COMPONENT}}.ini file
+  ansible.builtin.lineinfile:
+    path: /etc/selinux/config
+    regexp: '^gid'
+    line: uid = {{OUT.gid}}
+ 
 - name: configuring the service for {{ COMPONENT }}
   ansible.builtin.include_role:
     name: common
