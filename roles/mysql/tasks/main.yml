@@ -1,18 +1,16 @@
-- name: Configuring MongoDB Repository
+- name: Configuring {{COMPONENT}} Repository
   ansible.builtin.copy:
-    src: mongodb.repo
-    dest: /etc/yum.repos.d/mongodb.repo
+    src: mysql.repo
+    dest: /etc/yum.repos.d/{{COMPONENT}}.repo
 
-- name: Installing MongoDB
-  ansible.builtin.package:
-    name: mongodb-org
-    state: present 
-
-- name: Updating the MongoDB config to be public
-  ansible.builtin.replace:
-    path: /etc/mongod.conf
-    regexp: '127.0.0.1'
-    replace: '0.0.0.0'   
+- name: Installing {{COMPONENT}}
+  ansible.builtin.yum:
+    name:
+      - mysql-community-server
+      - python3-PyMySQL
+      - MySQL-python
+    state: present  
+        
 
 - name: Starting MongoDB
   ansible.builtin.systemd:
