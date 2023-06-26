@@ -9,12 +9,11 @@
       - mysql-community-server
       - python3-PyMySQL
       - MySQL-python
-    state: present  
-        
+    state: present       
 
-- name: Starting MongoDB
+- name: Starting {{COMPONENT}}
   ansible.builtin.systemd:
-    name: mongod
+    name: mysqld
     state: started
     enabled: true
 
