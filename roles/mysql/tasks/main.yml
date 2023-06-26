@@ -40,7 +40,7 @@
 
     - name: Uninstalling {{COMPONENT}} password validate plugin
       ansible.builtin.shell: echo "UNINSTALL PLUGIN validate_password;" | mysql -uroot -pRoboShop@1
-        ignore_errors: yes
+      ignore_errors: yes
 
 - name: Download and extract frontend
   ansible.builtin.include_role:
