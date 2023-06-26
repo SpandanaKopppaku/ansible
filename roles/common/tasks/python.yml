@@ -1,0 +1,30 @@
+- name: Installing python on {{COMPONENT}}-{{ENV}}
+  ansible.builtin.yum:
+    name:
+      - python36
+      - gcc
+      - python3-devel
+    state: present  
+      
+- name: Creating App User
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: create_user
+
+- name: Download and extract {{ COMPONENT }}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download
+
+- name: Generating artifact with npm install
+  community.general.npm:
+    path: /home/{{APPUSER}}/{{COMPONENT}} 
+
+- name: configuring the service for {{ COMPONENT }}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: config_svc
+
+- name: Configuring Node Name
+  ansible.builtin.shell: set-hostname {{COMPONENT}}-{{ENV}}
+    
