@@ -3,6 +3,7 @@
 - name: Creating EC2 for DryRun
   hosts: localhost
   gather_facts: true
+  become: False
   vars:
     instance_type: "t3.micro"
     security_group_id: "sg-0c27708a72fb51dd9"  # Update as per your security group id
