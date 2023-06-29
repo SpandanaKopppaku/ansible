@@ -2,7 +2,7 @@
 # Ensure you create an AMI from a server that has ANSIBLE Installed 
 - name: Creating EC2 for DryRun
   hosts: localhost
-  gather_facts: False
+  gather_facts: true
   vars:
     instance_type: "t3.micro"
     security_group_id: "sg-0c27708a72fb51dd9"  # Update as per your security group id
