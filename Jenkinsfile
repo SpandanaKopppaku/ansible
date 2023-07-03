@@ -16,6 +16,7 @@ pipeline{
         stage("Ansible Dry run"){
             steps{
                 sh '''
+                    echo
                     ansible-playbook robot.dryrun.yml -e COMPONENT=${COMPONENT} -e ansible_user=centos -e ansible_password=${SSHCRD_PSW} -e ENV=dev
 
                   '''  
