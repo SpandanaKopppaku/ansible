@@ -4,7 +4,7 @@ pipeline{
         SSHCRD          = credentials('SSH_CRD')
          }
     parameters {
-        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+        string(name: 'COMPONENT', defaultValue: 'mongodb', description: 'Enter the name of the component')
     }
     stages{
         stage("A"){
