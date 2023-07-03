@@ -1,7 +1,6 @@
 pipeline{
     agent any
-      environment{
-        ENv_URL         = "pipeline.google.com"                    // Global variable
+      environment{                   // Global variable
         SSHCRD          = credentials('SSH_CRD')
          }
     stages{
