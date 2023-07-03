@@ -19,13 +19,14 @@ pipeline{
                     ansible-playbook robot.dryrun.yml -e COMPONENT=${COMPONENT} -e ansible_user=centos -e ansible_password=${SSHCRD_PSW} -e ENV=dev
 
                   '''  
-            }   
+            }  
+        } 
         stage("Promoting Code to Prod Branch"){
             steps{
                 sh "echo Merging the feature branch to PROD branch"
             }  
         }   
         }
-    }
-}
+ }
+
             
