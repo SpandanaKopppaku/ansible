@@ -28,12 +28,12 @@ pipeline {
             when { branch pattern: "PR-.*", comparator: "REGEXP"}
             steps {
                 sh ''' 
-                    ansible-playbook robot-dryrun.yaml -e COMPONENT=${COMPONENT} -e ansible_user=centos -e ansible_password=${SSHCRED_PSW} -e ENV=dev
+                    ansible-playbook robot.dryrun.yml -e COMPONENT=${COMPONENT} -e ansible_user=centos -e ansible_password=${SSHCRED_PSW} -e ENV=dev
                 ''' 
             }
         }
 
-        // stage('Promoting Code to Prod Branch')          
+        // stage('Promoting Code to Prod Bra        
         //     when {
         //         branch 'main'
         //     }
