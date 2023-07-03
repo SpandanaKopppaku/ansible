@@ -1,8 +1,11 @@
 pipeline{
     agent any
-      environment{                   // Global variable
+    environment{                   // Global variable
         SSHCRD          = credentials('SSH_CRD')
          }
+    parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+    }
     stages{
         stage("A"){
             steps{
