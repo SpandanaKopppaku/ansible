@@ -8,6 +8,7 @@ pipeline{
         }
     stages{
         stage("Ansible Lint checks"){
+            when{branch pattern: "feature-*", comparator: "REGEXP" }
             steps{
                 sh "echo Lint Checks Completed"
             }  
